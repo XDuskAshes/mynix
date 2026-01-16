@@ -1,0 +1,10 @@
+# putting this under ignore simply because
+# i don't want to have a possibly outdated
+# hardware file. i might change my mind but
+# i'd rather let it get generated on every
+# install.
+hardware-configuration.nix
+
+# editor swap files
+*.sw?
+*~
