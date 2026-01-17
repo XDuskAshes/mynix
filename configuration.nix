@@ -57,7 +57,7 @@ services.pipewire = {
 
 users.users.dusk = {
 	isNormalUser = true;
-	description = "My typical user account.";
+	description = "Dusk";
 	extraGroups = [ "networkmanager" "wheel" ];
 	packages = with pkgs; [];
 };
@@ -68,8 +68,15 @@ environment.systemPackages = with pkgs; [
 	wget
 	btrfs-progs
 	gnupg
-	pinentry-curses
+	pinentry-qt
 	firefox
+    fish
+    alacritty
+    zoxide
+    flatpak
+    stow
+    vlc
+    fzf
 ];
 
 programs.gnupg.agent = {
