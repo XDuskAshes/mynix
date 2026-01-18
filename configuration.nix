@@ -4,6 +4,7 @@
     imports =
         [
             ./hardware-configuration.nix
+            ./fonts.nix
         ];
 
         # Bootloader.
@@ -84,7 +85,7 @@
     programs.gnupg.agent = {
         enable = true;
         enableSSHSupport = true;
-        pinentryPackage = pkgs.pinentry-curses;
+        pinentryPackage = pkgs.pinentry-qt;
     };
 
     # I AM NOT GONNA TOUCH THIS MORE OR LESS OUT OF FEAR
