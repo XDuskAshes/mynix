@@ -69,6 +69,11 @@
         shell = pkgs.fish;
     };
 
+    programs.nix-ld.enable = true;
+    programs.nix-ld.libraries = with pkgs; [
+        
+    ];
+
     nixpkgs.config.allowUnfree = true; # mostly because hardware is annoying on occasion. better safe than sorry. ¯\_(ツ)_/¯
     environment.systemPackages = with pkgs; [
         neovim
