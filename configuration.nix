@@ -58,6 +58,7 @@
         pulse.enable = true;
     };
 
+    services.flatpak.enable = true;
     programs.fish.enable = true;
     users.users.dusk = {
         isNormalUser = true;
