@@ -59,6 +59,7 @@
     };
 
     services.flatpak.enable = true;
+    xdg.portal.enable;
     programs.fish.enable = true;
     users.users.dusk = {
         isNormalUser = true;
