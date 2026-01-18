@@ -37,16 +37,17 @@
         LC_TIME = "en_US.UTF-8";
     };
 
-    # x11+gnome (going away ASAP)
     services.xserver.enable = true;
-    services.xserver.displayManager.gdm.enable = true;
-    services.xserver.desktopManager.gnome.enable = true;
-
-    services.xserver.xkb = {
-        layout = "us";
-        variant = "";
+    services.displayManager.sddm = {
+        enable = true;
     };
-
+    # KDE Plasma. I hope.
+    services.desktopManager.plasma6 = {
+        enable = true;
+        enableQt5Integration = true; # mostly for stuff that isn't QT6 yet.
+        notoPackage = pkgs.noto-fonts;
+    };
+    
     # Enable sound with pipewire.
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;
@@ -62,6 +63,7 @@
         description = "Dusk";
         extraGroups = [ "networkmanager" "wheel" ];
         packages = with pkgs; [];
+        shell = pkgs.fish;
     };
 
     nixpkgs.config.allowUnfree = true; # mostly because hardware is annoying on occasion. better safe than sorry. ¯\_(ツ)_/¯
@@ -80,6 +82,11 @@
         vlc
         fzf
         git
+
+        # the many KDE particulars
+        kdePackages.dolphin
+        kdePackages.koi
+        kdePackages.ark
     ];
 
     programs.gnupg.agent = {
