@@ -90,7 +90,7 @@
         vlc
         fzf
         git
-
+        fastfetch
         # the many KDE particulars
         kdePackages.dolphin
         kdePackages.koi
