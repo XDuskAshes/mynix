@@ -38,6 +38,7 @@
     };
 
     services.xserver.enable = true;
+    programs.xwayland.enable = true;
     services.displayManager.sddm = {
         enable = true;
     };
@@ -95,6 +96,10 @@
         kdePackages.dolphin
         kdePackages.koi
         kdePackages.ark
+
+        # muh gaaamesss
+        atlauncher
+        steam
     ];
 
     programs.gnupg.agent = {
