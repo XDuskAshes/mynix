@@ -1,6 +1,6 @@
 {
     # following along with a video by LibrePhoenix: https://www.youtube.com/watch?v=ACybVzRvDhs
-    description = "Test flake";
+    description = "Dusk's NixOS Config Flake";
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-unstable"; # 90% just because im used to arch being rolling. love me some rolling release.
     };
