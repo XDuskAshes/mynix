@@ -53,7 +53,12 @@
         enable = true;
         notoPackage = pkgs.noto-fonts;
     };
-    
+
+    # niri! eventual env of choice
+    programs.niri.enable = true;
+    # swaylock thing on the search said something about having to set this manually. dunno what it does though.
+    security.pam.services.swaylock = {};
+
     # Enable sound with pipewire.
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;
@@ -105,6 +110,10 @@
         # muh gaaamesss
         prismlauncher
         steam
+
+        # niri, mostly
+        swaylock
+        swaybg
     ];
 
     programs.gnupg.agent = {
