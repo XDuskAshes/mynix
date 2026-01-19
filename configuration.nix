@@ -98,7 +98,7 @@
         kdePackages.ark
 
         # muh gaaamesss
-        atlauncher
+        prismlauncher
         steam
     ];
 
