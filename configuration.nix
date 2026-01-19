@@ -41,11 +41,16 @@
     programs.xwayland.enable = true;
     services.displayManager.sddm = {
         enable = true;
+        wayland.enable = true;
+        settings = {
+            General = {
+                DisplayServer = "wayland";
+            };
+        };
     };
     # KDE Plasma. I hope.
     services.desktopManager.plasma6 = {
         enable = true;
-        enableQt5Integration = true; # mostly for stuff that isn't QT6 yet.
         notoPackage = pkgs.noto-fonts;
     };
     
