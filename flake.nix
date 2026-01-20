@@ -14,7 +14,10 @@
                 system = "x86_64-linux";
                 modules = [
                     ./configuration.nix
+                    ./modules/apps/media/spotify.nix
                 ];
+
+                specialArgs = { inherit spicetify-nix; };
             };
         };
     };
