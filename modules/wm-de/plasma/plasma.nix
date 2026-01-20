@@ -4,7 +4,7 @@ with lib;
 
 {
     options.doPlasma = {
-        enable = mkOption = {
+        enable = mkOption; {
             type = types.bool;
             default = false;
             description = "Enable KDE Plasma and it's particulars.";
