@@ -1,17 +1,18 @@
 { config, lib, pkgs, ... }:
 
-with lib;
-
+let
+    cfg = config.wmde.plasma;
+in
 {
-    options.doPlasma = {
-        enable = mkOption; {
-            type = types.bool;
+    options = {
+        wmde.plasma.enable = lib.mkOption {
             default = false;
-            description = "Enable KDE Plasma and it's particulars.";
+            type = with lib.types; bool;
+            description = "Enable/Disable KDE Plasma and its particulars.";
         };
     };
 
-    config = mkIf config.doPlasma.enable {
+    config = lib.mkIf cfg.enable {
         services.desktopManager.plasma6 = {
             enable = true;
             notoPackage = pkgs.noto-fonts;
@@ -20,15 +21,12 @@ with lib;
         environment.systemPackages = with pkgs.kdePackages; [
             dolphin
             ark
-            systemsettings
             spectacle
         ];
 
         environment.plasma6.excludePackages = with pkgs.kdePackages; [
             elisa
             discover
-            kwrite
-
         ];
     };
-};
+}

@@ -50,7 +50,7 @@
     };
     
     # plasma again
-    doPlasma.enable = true;
+    wmde.plasma.enable = true;
 
     # niri! eventual env of choice
     programs.niri.enable = true;
