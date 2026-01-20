@@ -13,6 +13,8 @@ in
     };
 
     config = lib.mkIf cfg.enable {
+        import = [ ../basewl.nix ];
+
         services.desktopManager.plasma6 = {
             enable = true;
             notoPackage = pkgs.noto-fonts;
