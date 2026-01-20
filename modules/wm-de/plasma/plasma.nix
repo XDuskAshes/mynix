@@ -11,10 +11,12 @@ in
             description = "Enable/Disable KDE Plasma and its particulars.";
         };
     };
+    
+    imports = [
+        ../basewl.nix
+    ];
 
     config = lib.mkIf cfg.enable {
-        imports = [ ../basewl.nix ];
-
         services.desktopManager.plasma6 = {
             enable = true;
             notoPackage = pkgs.noto-fonts;
