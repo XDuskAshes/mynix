@@ -1,3 +1,10 @@
 # My NixOS Config
 
-I'm messing around with NixOS. I **did** just have it on a VM previously, but now it's on a secondary drive on my computer. This entire repo is very subject to change and I'm unsure if I'll swap to NixOS fully.
+Currently messing around with NixOS on a secondary drive, although I do plan to put it on my main one eventually.
+
+THINGS TO DO BEFORE THAT THOUGH:
+
+- [x] Get this thing mostly modular
+- [ ] Figure out flakes better
+- [ ] Decide if I'm ready to trust Home Manager
+More later.. probably.
