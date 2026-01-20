@@ -5,7 +5,20 @@
         [
             ./hardware-configuration.nix
             ./modules/fonts.nix
+            ./modules/termutils.nix
+
+            # import wm/de
             ./modules/wm-de/plasma/plasma.nix
+
+            # import media apps
+            ./modules/apps/media/spotify.nix
+
+            # import social apps
+            ./modules/apps/social/discord.nix
+
+            # import game apps
+            ./modules/apps/games/prismlauncher.nix
+            ./modules/apps/games/steam.nix
         ];
 
         # Bootloader.
@@ -86,24 +99,15 @@
     nixpkgs.config.allowUnfree = true; # mostly because hardware is annoying on occasion. better safe than sorry. ¯\_(ツ)_/¯
     environment.systemPackages = with pkgs; [
         neovim
-        wget
-        btrfs-progs
         gnupg
         pinentry-qt
         firefox
         fish
         alacritty
-        zoxide
         flatpak
-        stow
         vlc
-        fzf
-        git
         fastfetch
-
-        # muh gaaamesss
-        prismlauncher
-        steam
+        vscodium
 
         # niri, mostly
         swaylock
