@@ -4,7 +4,8 @@
     imports =
         [
             ./hardware-configuration.nix
-            ./fonts.nix
+            ./modules/fonts.nix
+            ./modules/wm-de/plasma/plasma.nix
         ];
 
         # Bootloader.
@@ -48,11 +49,9 @@
             };
         };
     };
-    # KDE Plasma. I hope.
-    services.desktopManager.plasma6 = {
-        enable = true;
-        notoPackage = pkgs.noto-fonts;
-    };
+    
+    # plasma again
+    doPlasma.enable = true;
 
     # niri! eventual env of choice
     programs.niri.enable = true;
@@ -115,6 +114,11 @@
         swaylock
         swaybg
     ];
+
+    programs.steam = {
+        enable = true;
+        protontricks.enable = true;
+    };
 
     programs.gnupg.agent = {
         enable = true;
