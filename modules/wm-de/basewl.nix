@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... };
+{ config, lib, pkgs, ... }:
 
 {
     # This file is used as a base for all Wayland DEs/WMs, mostly Niri.

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... };
+{ config, lib, pkgs, ... }:
 
 {
     # This file is just for display manager stuff.
