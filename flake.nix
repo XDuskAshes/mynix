@@ -5,13 +5,13 @@
         nixpkgs.url = "nixpkgs/nixos-unstable"; # 90% just because im used to arch being rolling. love me some rolling release.
         spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     };
-    outputs = { self, nixpkgs, spicetify-nix, ... }:
+    outputs = { self, nixpkgs, spicetify-nix, home-manager, ... }@inputs:
     let
         lib = nixpkgs.lib;
+        system = "x86_64-linux";
     in {
         nixosConfigurations = {
             nixtester = lib.nixosSystem {
-                system = "x86_64-linux";
                 modules = [
                     ./configuration.nix
                     ./modules/apps/media/spotify.nix
