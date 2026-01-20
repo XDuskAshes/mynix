@@ -9,6 +9,7 @@
 
             # import wm/de and display manager
             ./modules/wm-de/plasma/plasma.nix
+            ./modules/wm-de/niri/niri.nix
             ./modules/wm-de/displaymanager.nix
             
             # import media apps
@@ -54,11 +55,7 @@
 
     # plasma again
     wmde.plasma.enable = true;
-
-    # niri! eventual env of choice
-    programs.niri.enable = true;
-    # swaylock thing on the search said something about having to set this manually. dunno what it does though.
-    security.pam.services.swaylock = {};
+    wmde.niri.enable = true; # eventually
 
     # Enable sound with pipewire.
     services.pulseaudio.enable = false;
@@ -82,9 +79,7 @@
     };
 
     programs.nix-ld.enable = true;
-    programs.nix-ld.libraries = with pkgs; [
-        
-    ];
+    programs.nix-ld.libraries = with pkgs; [];
 
     nixpkgs.config.allowUnfree = true; # mostly because hardware is annoying on occasion. better safe than sorry. ¯\_(ツ)_/¯
     environment.systemPackages = with pkgs; [
@@ -98,16 +93,7 @@
         vlc
         fastfetch
         vscodium
-
-        # niri, mostly
-        swaylock
-        swaybg
     ];
-
-    programs.steam = {
-        enable = true;
-        protontricks.enable = true;
-    };
 
     programs.gnupg.agent = {
         enable = true;
