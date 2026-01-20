@@ -7,11 +7,13 @@
     };
     outputs = { self, nixpkgs, ... }:
     let
-        lib = nixpkgs.lib;
+        system = "x86_64-linux";
+        pkgs = import nixpkgs { inherit system; };
+        lib = pkgs.lib;
     in {
         nixosConfigurations = {
             nixtester = lib.nixosSystem {
-                system = "x86_64-linux";
+                inherit system;
                 modules = [
                     ./configuration.nix
                     ./modules/apps/media/spotify.nix
