@@ -39,7 +39,6 @@
     };
 
     services.xserver.enable = true;
-    programs.xwayland.enable = true;
     services.displayManager.sddm = {
         enable = true;
         wayland.enable = true;
@@ -101,10 +100,6 @@
         fzf
         git
         fastfetch
-        # the many KDE particulars
-        kdePackages.dolphin
-        kdePackages.koi
-        kdePackages.ark
 
         # muh gaaamesss
         prismlauncher
