@@ -1,17 +1,20 @@
 { config, pkgs, spicetify-nix, ... }:
 
 let
-    spicePkgs = spicetify-nix.legacyPackages.${pkgs.system};
+  spicePkgs = spicetify-nix.legacyPackages.${pkgs.system};
 in {
-    imports = [ spicetify-nix.nixosModules.spicetify ];
+  imports = [
+    spicetify-nix.nixosModules.spicetify
+  ];
 
-    programs.spicetify = {
-        enable = true;
-        theme = spicePkgs.themes.onepunch;
-        enabledExtensions = with spicePkgs.extensions; [
-            adblockify
-            shuffle
-            volumePercentage
-        ];
-    };
-};
+  programs.spicetify = {
+    enable = true;
+    theme = spicePkgs.themes.onepunch;
+    enabledExtensions = with spicePkgs.extensions; [
+      adblockify
+      shuffle
+      volumePercentage
+    ];
+  };
+}
+
