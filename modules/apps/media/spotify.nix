@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 
 {
-    import = [ spicetify-nix.nixosModules.spicetify ];
+    import = [ inputs.spicetify-nix.nixosModules.spicetify ];
     programs.spicetify = {
         let
             spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
