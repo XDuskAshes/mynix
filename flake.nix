@@ -8,29 +8,13 @@
     outputs = { self, nixpkgs, ... }:
     let
         lib = nixpkgs.lib;
-        pkgs = import nixpkgs { inherit system; };
-        spicePkgs = spicetify-nix.legacyPackages.${system};
     in {
         nixosConfigurations = {
             nixtester = lib.nixosSystem {
                 system = "x86_64-linux";
                 modules = [
                     ./configuration.nix
-
-                    spicetify-nix.nixosModules.default
                 ];
-                configuration = {
-                    nixpkgs.config.allowUnfree = true;
-
-                    programs.spicetify = {
-                        enable = true;
-                        enabledExtensions = with spicePkgs.extensions; [
-                           adblockify
-                           shuffle
-                           volumePercentage
-                        ];
-                    };
-                };
             };
         };
     };
