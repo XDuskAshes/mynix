@@ -13,7 +13,7 @@ in
     };
 
     config = lib.mkIf cfg.enable {
-        import = [ ../basewl.nix ];
+        imports = [ ../basewl.nix ];
 
         services.desktopManager.plasma6 = {
             enable = true;
