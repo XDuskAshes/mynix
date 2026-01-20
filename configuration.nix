@@ -7,9 +7,10 @@
             ./modules/fonts.nix
             ./modules/termutils.nix
 
-            # import wm/de
+            # import wm/de and display manager
             ./modules/wm-de/plasma/plasma.nix
-
+            ./modules/wm-de/displaymanager.nix
+            
             # import media apps
             ./modules/apps/media/spotify.nix
 
@@ -51,17 +52,6 @@
         LC_TIME = "en_US.UTF-8";
     };
 
-    services.xserver.enable = true;
-    services.displayManager.sddm = {
-        enable = true;
-        wayland.enable = true;
-        settings = {
-            General = {
-                DisplayServer = "wayland";
-            };
-        };
-    };
-    
     # plasma again
     wmde.plasma.enable = true;
 
