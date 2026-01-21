@@ -19,7 +19,7 @@ in
     config = lib.mkIf cfg.enable {
         programs.niri.enable = true;
         security.polkit.enable = true;
-        security.gnome.gnome-keyring.enable = true; # Oh GNOME how your beautiful face turns corner before your fugly form.. kick so many rocks.
+        services.gnome.gnome-keyring.enable = true; # Oh GNOME how your beautiful face turns corner before your fugly form.. kick so many rocks.
         environment.systemPackages = with pkgs; [ fuzzel swaylock mako swayidle grim slurp xwayland-satellite ];
     };
 }
