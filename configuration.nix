@@ -29,6 +29,16 @@
         efi.canTouchEfiVariables = true;
     };
 
+    zramSwap = {
+        enable = true;
+
+        # These are already by default, but might as well specify in case that default changes later.
+
+        algorithm = "zstd";
+        memoryPercent = 50;
+
+    };
+
     boot.kernelPackages = pkgs.linuxPackages_zen;
 
     networking.hostName = "nixtester"; # Define your hostname.
