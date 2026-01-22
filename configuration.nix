@@ -3,7 +3,11 @@
 {
     imports =
         [
+            # oh boy oh boy hardware !!!
             ./hardware-configuration.nix
+            ./modules/hwacceleration/nvidia.nix
+
+            # useful
             ./modules/fonts.nix
             ./modules/termutils.nix
 
@@ -79,13 +83,13 @@
 
     services.flatpak.enable = true;
     xdg.portal.enable = true;
-    programs.fish.enable = true;
+    programs.git.enable = true;  
     users.users.dusk = {
         isNormalUser = true;
         description = "Dusk";
         extraGroups = [ "networkmanager" "wheel" ];
         packages = with pkgs; [];
-        shell = pkgs.fish;
+        shell = pkgs.zsh;
     };
 
     programs.nix-ld.enable = true;
