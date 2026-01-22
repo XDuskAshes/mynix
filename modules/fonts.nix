@@ -1,14 +1,14 @@
 { pkgs, ... }:
 
 {
-    environment.systemPackages = with pkgs; [
-        noto-fonts-color-emoji
-        noto-fonts-emoji-blob-bin
-        liberation_ttf
-        nerd-fonts.hack
-    ];
-
     fonts = {
+        packages = with pkgs; [
+            nerd-fonts.jetbrains-mono
+            noto-fonts-color-emoji
+            noto-fonts-emoji-blob-bin
+            liberation_ttf
+            nerd-fonts.hack
+        ];
         fontDir.enable = true;
         fontconfig = {
             enable = true;
