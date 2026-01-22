@@ -1,11 +1,14 @@
 {
-    # following along with a video by LibrePhoenix: https://www.youtube.com/watch?v=ACybVzRvDhs
     description = "Dusk's NixOS Config Flake";
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-unstable"; # 90% just because im used to arch being rolling. love me some rolling release.
+        home-manager = {
+            url = "github:nix-community/home-manager/release-25.11";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
         spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     };
-    outputs = { self, nixpkgs, spicetify-nix, ... }:
+    outputs = { self, nixpkgs, home-manager, spicetify-nix, ... }:
     let
         lib = nixpkgs.lib;
         system = "x86_64-linux";
@@ -14,6 +17,15 @@
             nixie = lib.nixosSystem {
                 modules = [
                     ./configuration.nix
+                    home-manager.nixosModules.home-manager
+                    {
+                        home-manager = {
+                            useGlobalPkgs = true;
+                            useUserPackages = true;
+                            users.dusk = import ./home.nix;
+                            backupFileExtension = "backup";
+                        };
+                    }
                     ./modules/apps/media/spotify.nix
                 ];
                 specialArgs = { inherit spicetify-nix; };
