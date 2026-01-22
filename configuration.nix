@@ -41,7 +41,7 @@
 
     boot.kernelPackages = pkgs.linuxPackages_zen;
 
-    networking.hostName = "nixtester"; # Define your hostname.
+    networking.hostName = "nixie"; # Define your hostname.
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant. (unsure if i will need this later)
     networking.networkmanager.enable = true;
     time.timeZone = "America/New_York";

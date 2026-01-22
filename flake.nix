@@ -11,7 +11,7 @@
         system = "x86_64-linux";
     in {
         nixosConfigurations = {
-            nixtester = lib.nixosSystem {
+            nixie = lib.nixosSystem {
                 modules = [
                     ./configuration.nix
                     ./modules/apps/media/spotify.nix
