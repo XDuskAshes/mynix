@@ -83,13 +83,14 @@
 
     services.flatpak.enable = true;
     xdg.portal.enable = true;
-    programs.git.enable = true;  
+    programs.git.enable = true;
+    programs.fish.enable = true;
     users.users.dusk = {
         isNormalUser = true;
         description = "Dusk";
         extraGroups = [ "networkmanager" "wheel" ];
         packages = with pkgs; [];
-        shell = pkgs.zsh;
+        shell = pkgs.fish;
     };
 
     programs.nix-ld.enable = true;
@@ -100,7 +101,6 @@
         neovim
         gnupg
         pinentry-qt
-        firefox
         fish
         alacritty
         flatpak
