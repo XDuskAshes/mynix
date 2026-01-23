@@ -25,6 +25,10 @@
             # import game apps
             ./modules/apps/games/prismlauncher.nix
             ./modules/apps/games/steam.nix
+
+            # import my content apps
+            ./modules/apps/content/obs.nix
+            ./modules/apps/content/audacity.nix
         ];
 
         # Bootloader.
