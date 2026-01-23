@@ -29,6 +29,7 @@
             # import my content apps
             ./modules/apps/content/obs.nix
             ./modules/apps/content/audacity.nix
+            ./modules/apps/content/kdenlive.nix
         ];
 
         # Bootloader.
