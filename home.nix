@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, spicetify-nix, ... }:
 
 {
     home = {
@@ -68,5 +68,9 @@
             default = "ddg";
             privateDefault = "ddg";
         };
+    };
+
+    programs.vesktop = { # You, reading this. You aren't some narc, are ya?
+        enable = true;
     };
 }

@@ -16,12 +16,6 @@
             ./modules/wm-de/niri/niri.nix
             ./modules/wm-de/displaymanager.nix
             
-            # import media apps
-            ./modules/apps/media/spotify.nix
-
-            # import social apps
-            ./modules/apps/social/discord.nix
-
             # import game apps
             ./modules/apps/games/prismlauncher.nix
             ./modules/apps/games/steam.nix
@@ -30,6 +24,9 @@
             ./modules/apps/content/obs.nix
             ./modules/apps/content/audacity.nix
             ./modules/apps/content/kdenlive.nix
+
+            # will eventually be moved into home-manager.. eventually.
+            ./modules/apps/media/spotify.nix
         ];
 
         # Bootloader.
