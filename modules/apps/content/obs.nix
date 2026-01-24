@@ -4,8 +4,8 @@
     programs.obs-studio = {
         enable = true;
         enableVirtualCamera = true;
-        plugins = {
+        plugins = [
             # In case I ever need any.
-        };
+        ];
     };
 }
