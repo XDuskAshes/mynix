@@ -106,6 +106,7 @@
         vlc
         fastfetch
         vscodium
+        nordzy-cursor-theme
     ];
 
     programs.gnupg.agent = {

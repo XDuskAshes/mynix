@@ -76,6 +76,14 @@
 
     services.mako = {
         enable = true;
+    };
 
+    home.pointerCursor = {
+        enable = true;
+        package = pkgs.nordzy-cursor-theme;
+        name = "Nordzy";
+        size = 24;
+        gtk.enable = true;
+        x11.enable = true;
     };
 }
