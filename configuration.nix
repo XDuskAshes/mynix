@@ -12,7 +12,6 @@
             ./modules/termutils.nix
 
             # import wm/de and display manager
-            ./modules/wm-de/plasma/plasma.nix
             ./modules/wm-de/niri/niri.nix
             ./modules/wm-de/displaymanager.nix
             
@@ -69,8 +68,6 @@
         LC_TIME = "en_US.UTF-8";
     };
 
-    # plasma again
-    wmde.plasma.enable = true;
     wmde.niri.enable = true; # eventually
 
     # Enable sound with pipewire.
