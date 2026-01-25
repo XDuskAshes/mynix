@@ -73,4 +73,9 @@
     programs.vesktop = { # You, reading this. You aren't some narc, are ya?
         enable = true;
     };
+
+    services.mako = {
+        enable = true;
+
+    };
 }
