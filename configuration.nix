@@ -107,8 +107,8 @@
         gnupg
         pinentry-qt
         fish
+        zsh
         alacritty
-        kitty
         flatpak
         vlc
         fastfetch
