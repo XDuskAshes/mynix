@@ -92,6 +92,12 @@
         shell = pkgs.fish;
     };
 
+    fileSystems."/mnt/SteamGames" = {
+        device = "/dev/disk/by-label/SteamGames";
+        fsType = "ext4";
+        options = [ "defaults" ];
+    };
+
     programs.nix-ld.enable = true;
     programs.nix-ld.libraries = with pkgs; [];
 
@@ -102,6 +108,7 @@
         pinentry-qt
         fish
         alacritty
+        kitty
         flatpak
         vlc
         fastfetch
