@@ -92,7 +92,7 @@
         plugins = with pkgs; [
             rofi-calc
         ];
-        extraConfig {
+        extraConfig = {
             
         };
     };
