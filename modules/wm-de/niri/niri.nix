@@ -23,23 +23,14 @@ in
         environment.systemPackages = with pkgs; [
             fuzzel
             swaylock
-            mako # NOTE: Working on getting this working.
-                 # Do I need to disable KDE? Or something? Weird shit.
-                 # 
-                 # ~ ><> mako
-                 # Failed to acquire service name: File exists
-                 # Is a notification daemon already running?
-                 # 
-                 # What other notification daemon?
+            mako
             swayidle
             swaybg
             grim
             slurp
             xwayland-satellite
             quickshell
-
-            rofi
-            rofi-calc
+            wl-clipboard
         ];
     };
 }
