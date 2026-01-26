@@ -86,4 +86,14 @@
         gtk.enable = true;
         x11.enable = true;
     };
+
+    programs.rofi = {
+        enable = true;
+        plugins = with pkgs; [
+            rofi-calc
+        ];
+        extraConfig {
+            
+        };
+    };
 }
