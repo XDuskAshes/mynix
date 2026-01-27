@@ -3,6 +3,6 @@
 {
     environment.systemPackages = with pkgs; [
         python3
-        python313packages.pip
+        python313Packages.pip
     ];
 }

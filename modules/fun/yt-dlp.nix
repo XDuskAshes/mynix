@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-    import = [ ./../dev/python/python.nix ];
+    imports = [ ./../dev/python/python.nix ];
     environment.systemPackages = with pkgs; [
         # JS runtimes.
         # By default, Deno gets used.
