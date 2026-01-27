@@ -26,6 +26,9 @@
 
             # will eventually be moved into home-manager.. eventually.
             ./modules/apps/media/spotify.nix
+
+            # yt-dlp
+            ./modules/fun/yt-dlp.nix
         ];
 
         # Bootloader.
