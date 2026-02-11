@@ -13,6 +13,7 @@
 
             # import wm/de and display manager
             ./modules/wm-de/niri/niri.nix
+            ./modules/wm-de/plasma/plasma.nix
             ./modules/wm-de/displaymanager.nix
             
             # import game apps
@@ -27,8 +28,17 @@
             # will eventually be moved into home-manager.. eventually.
             ./modules/apps/media/spotify.nix
 
-            # yt-dlp
+            # Discord is a clusterfuck on occasion. I prefer
+            # the typical version with Vencord managed rather
+            # than Vesktop which has its issues.
+            ./modules/apps/social/discord.nix
+
+            # fun :]
             ./modules/fun/yt-dlp.nix
+            ./modules/fun/jellyfin.nix
+
+            # hmmm
+            ./modules/virt.nix
         ];
 
         # Bootloader.
@@ -72,6 +82,7 @@
     };
 
     wmde.niri.enable = true; # eventually
+    wmde.plasma.enable = true;
 
     # Enable sound with pipewire.
     services.pulseaudio.enable = false;
@@ -106,7 +117,6 @@
 
     nixpkgs.config.allowUnfree = true; # mostly because hardware is annoying on occasion. better safe than sorry. ¯\_(ツ)_/¯
     environment.systemPackages = with pkgs; [
-        neovim
         gnupg
         pinentry-qt
         fish
@@ -117,6 +127,9 @@
         fastfetch
         vscodium
         nordzy-cursor-theme
+        strawberry
+        nixd
+        vscodium # useful to have sometimes
     ];
 
     programs.gnupg.agent = {
