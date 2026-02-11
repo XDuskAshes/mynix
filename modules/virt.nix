@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-    virtualization.libvirtd = {
+    virtualisation.libvirtd = {
         enable = true;
     };
 
