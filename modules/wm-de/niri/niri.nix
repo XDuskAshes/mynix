@@ -14,6 +14,7 @@ in
     
     imports = [
         ../basewl.nix
+        ../waylandwmtools.nix
     ];
 
     config = lib.mkIf cfg.enable {
@@ -22,15 +23,7 @@ in
         services.gnome.gnome-keyring.enable = true; # Oh GNOME how your beautiful face turns corner before your fugly form.. kick so many rocks.
         environment.systemPackages = with pkgs; [
             fuzzel
-            swaylock
-            mako
-            swayidle
-            swaybg
-            grim
-            slurp
-            xwayland-satellite
             quickshell
-            wl-clipboard
         ];
     };
 }
