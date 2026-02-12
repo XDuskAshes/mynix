@@ -14,6 +14,7 @@
             # import wm/de and display manager
             ./modules/wm-de/niri/niri.nix
             ./modules/wm-de/plasma/plasma.nix
+            ./modules/wm-de/sway
             ./modules/wm-de/displaymanager.nix
             
             # import game apps
@@ -28,6 +29,8 @@
             # will eventually be moved into home-manager.. eventually.
             ./modules/apps/media/spotify.nix
 
+            # import my social apps
+            ./modules/apps/social/matrix.nix
             # Discord is a clusterfuck on occasion. I prefer
             # the typical version with Vencord managed rather
             # than Vesktop which has its issues.
@@ -83,6 +86,7 @@
 
     wmde.niri.enable = true; # eventually
     wmde.plasma.enable = true;
+    wmde.sway.enable = true; # testing
 
     # Enable sound with pipewire.
     services.pulseaudio.enable = false;
