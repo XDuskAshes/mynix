@@ -7,6 +7,12 @@
         stateVersion = "25.11";
     };
 
+    xdg = {
+        autostart = {
+            enable = true;
+        };
+    };
+
     programs.firefox = {
         enable = true;
         policies = {
@@ -54,6 +60,16 @@
                 # probably anyway
                 "@contain-facebook" = { # Facebook Container - https://github.com/mozilla/contain-facebook
                     install_url = moz "facebook-container";
+                    installation_mode = "force_installed";
+                };
+                
+                # I have decided I do not trust a browser with my passwords.
+                # It can have my bookmarks though, mostly for a lack of other
+                # ways I would enjoy having those set declaratively. Plus it's
+                # nice to freely bookmark.
+
+                "keepassxc-browser@keepassxc.org" = {
+                    install_url = moz "keepassxc-browser";
                     installation_mode = "force_installed";
                 };
 
@@ -118,5 +134,10 @@
 
     programs.neovim = {
         enable = true;
+    };
+
+    programs.keepassxc = {
+        enable = true;
+        autostart = true;
     };
 }
