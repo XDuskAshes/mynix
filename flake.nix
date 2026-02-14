@@ -7,8 +7,20 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+        nvf = {
+            url = "github:notashelf/nvf";
+            inputs = {
+                nixpkgs = {
+                    follows = "nixpkgs";
+                };
+
+                home-manager = {
+                    follows = "home-manager";
+                };
+            };
+        };
     };
-    outputs = { self, nixpkgs, home-manager, spicetify-nix, ... }:
+    outputs = { self, nixpkgs, home-manager, spicetify-nix, nvf, ... }:
     let
         lib = nixpkgs.lib;
         system = "x86_64-linux";
@@ -22,7 +34,7 @@
                         home-manager = {
                             useGlobalPkgs = true;
                             useUserPackages = true;
-                            users.dusk = imports [
+                            users.dusk = import [
                                 ./home.nix
                                 nvf.homeManagerModules.default
                             ];
