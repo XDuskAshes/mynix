@@ -22,7 +22,10 @@
                         home-manager = {
                             useGlobalPkgs = true;
                             useUserPackages = true;
-                            users.dusk = import ./home.nix;
+                            users.dusk = imports [
+                                ./home.nix
+                                nvf.homeManagerModules.default
+                            ];
                             backupFileExtension = "backup";
                         };
                     }
