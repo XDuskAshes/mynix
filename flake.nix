@@ -43,7 +43,6 @@
                         users.dusk = {
                             imports = [
                                 ./home.nix
-                                inputs.nvf.homeManagerModules.default
                             ];
                         };
                     };
