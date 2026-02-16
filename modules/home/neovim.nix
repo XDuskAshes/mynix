@@ -11,5 +11,12 @@
         extraLuaConfig = ''
             ${builtins.readFile ./extern-config/neovim.lua}
         '';
+
+        plugins = with pkgs.vimPlugins; [
+            telescope-nvim
+            vimwiki
+            lualine-nvim
+            fidget-nvim
+        ];
     };
 }

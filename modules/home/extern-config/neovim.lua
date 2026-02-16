@@ -4,6 +4,8 @@
 
 local map = vim.keymap.set
 
+vim.g.mapleader = " "
+
 -- Line numbering
 vim.opt.number = true
 vim.opt.relativenumber = true
