@@ -7,6 +7,8 @@
             ./hardware-configuration.nix
             ./modules/hwacceleration/nvidia.nix
 
+            ./modules/dev
+
             # useful
             ./modules/fonts.nix
             ./modules/termutils.nix
@@ -36,7 +38,6 @@
             ./modules/apps/social/discord.nix
 
             # fun :]
-            ./modules/fun/yt-dlp.nix
             ./modules/fun/jellyfin.nix
 
             # hmmm
@@ -58,6 +59,8 @@
         memoryPercent = 50;
 
     };
+
+    dev.ruby.enable = true;
 
     boot.kernelPackages = pkgs.linuxPackages_zen;
 
