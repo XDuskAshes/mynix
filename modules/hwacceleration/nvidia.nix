@@ -12,7 +12,12 @@
 
     hardware.nvidia = {
         open = false;
-        modesetting.enable = true;
         nvidiaSettings = true;
+        modesetting = {
+            enable = true;
+        };
+        opengl = {
+            enable = true;
+        };
     };
 }

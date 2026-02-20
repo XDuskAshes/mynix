@@ -2,9 +2,8 @@
 
 {
     imports = [
-        ./niri
         ./plasma
-        ./sway # Fingers crossed!
+        ./hyprland
         ./greeter.nix
     ];
 }

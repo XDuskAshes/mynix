@@ -91,8 +91,8 @@
         LC_TIME = "en_US.UTF-8";
     };
 
-    wmde.niri.enable = true; # eventually
     wmde.plasma.enable = true;
+    wmde.hyprland.enable = true;
 
     # Enable sound with pipewire.
     services.pulseaudio.enable = false;
