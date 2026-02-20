@@ -16,8 +16,5 @@
         modesetting = {
             enable = true;
         };
-        opengl = {
-            enable = true;
-        };
     };
 }
