@@ -18,9 +18,8 @@ in
     ];
 
     config = lib.mkIf cfg.enable {
-        prorgrams.hyprland = {
+        programs.hyprland = {
             enable = true;
-            nvidiaPatches = true;
             xwayland = {
                 enable = true;
             };
@@ -31,9 +30,9 @@ in
             NIXOS_OZONE_WL = "1";
         };
 
-        environment.systemPackages = with pkgs; {
+        environment.systemPackages = with pkgs; [
             kitty
             hyprpaper
-        };
+        ];
     };
 }
