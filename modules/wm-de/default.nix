@@ -4,6 +4,9 @@
     imports = [
         ./niri
         ./plasma
-        ./displaymanager.nix
+        # Eventually, as niri is giving me headaches
+        # and Hyprland is too fucking hyper.
+        # ./sway
+        ./greeter.nix
     ];
 }
