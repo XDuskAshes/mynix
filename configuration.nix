@@ -13,11 +13,8 @@
             ./modules/fonts.nix
             ./modules/termutils.nix
 
-            # import wm/de and display manager
-            ./modules/wm-de/niri/niri.nix
-            ./modules/wm-de/plasma/plasma.nix
-            ./modules/wm-de/displaymanager.nix
-            
+            ./modules/wm-de
+
             # import game apps
             ./modules/apps/games/prismlauncher.nix
             ./modules/apps/games/steam.nix
@@ -126,7 +123,7 @@
     };
 
     programs.nix-ld.enable = true;
-    programs.nix-ld.libraries = with pkgs; [];
+    programs.nix-ld.libraries = with pkgs; [libxcrypt];
 
     nixpkgs.config.allowUnfree = true; # mostly because hardware is annoying on occasion. better safe than sorry. ¯\_(ツ)_/¯
     environment.systemPackages = with pkgs; [
