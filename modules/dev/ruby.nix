@@ -24,6 +24,8 @@ in
             RUBY_EXEC = "${pkgs.ruby}/bin/ruby";
             SOLARGRAPH_BIN = "${solargraph}/bin/solargraph";
             RUBY_LSP_BIN = "${rubyLsp}/bin/ruby-lsp";
+            GEM_HOME = "$HOME/.gem/";
+            GEM_PATH = "$GEM_HOME";
         };
     };
 }
