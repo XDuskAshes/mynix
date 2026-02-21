@@ -131,11 +131,10 @@
         pinentry-qt
         fish
         zsh
-        alacritty
+        foot
         flatpak
         vlc
         fastfetch
-        vscodium
         nordzy-cursor-theme
         strawberry
         nixd
