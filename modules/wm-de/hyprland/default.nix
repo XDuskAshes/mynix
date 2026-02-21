@@ -31,8 +31,10 @@ in
         };
 
         environment.systemPackages = with pkgs; [
-            kitty
             hyprpaper
+            quickshell
+            elephant
+            walker
         ];
     };
 }

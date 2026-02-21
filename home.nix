@@ -1,4 +1,4 @@
-{ config, pkgs, spicetify-nix, ... }:
+{ config, pkgs, inputs, spicetify-nix, ... }:
 
 {
     home = {
@@ -8,9 +8,7 @@
     };
 
     imports = [
-        inputs.ags.homeManagerModules.default
         ./modules/home/firefox.nix
-        ./modules/home/rofi.nix
         ./modules/home/neovim.nix
     ];
 
@@ -22,15 +20,6 @@
 
     services.mako = {
         enable = true;
-    };
-
-    programs.ags = {
-        enable = true;
-        configDir = ./modules/home/extern-config/ags;
-        extraPackages = with pkgs; [
-            inputs.astal.packages.${pkgs.system}.battery
-            fzf
-        ];
     };
 
     home.pointerCursor = {
