@@ -15,14 +15,6 @@
             url = "github:Gerg-L/spicetify-nix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-
-        astal = {
-            url = "github:aylur/astal";
-        };
-
-        ags = {
-            url = "github:aylur/ags";
-        };
     };
 
     outputs =
