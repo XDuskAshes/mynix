@@ -91,7 +91,7 @@
         LC_TIME = "en_US.UTF-8";
     };
 
-    wmde.plasma.enable = true;
+    wmde.plasma.enable = false;
     wmde.hyprland.enable = true;
 
     # Enable sound with pipewire.
@@ -137,6 +137,7 @@
         fastfetch
         nordzy-cursor-theme
         strawberry
+        thunar
         nixd
         vscodium # useful to have sometimes
     ];
@@ -145,6 +146,20 @@
         enable = true;
         enableSSHSupport = true;
         pinentryPackage = pkgs.pinentry-qt;
+    };
+
+    security = {
+        sudo = {
+            enable = false;
+        };
+
+        doas = {
+            enable = true;
+            extraRules = [{
+                users = ["dusk"];
+                keepEnv = true;
+            }];
+        };
     };
 
     # I AM NOT GONNA TOUCH THIS MORE OR LESS OUT OF FEAR
