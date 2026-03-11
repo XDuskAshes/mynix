@@ -15,6 +15,11 @@
             url = "github:Gerg-L/spicetify-nix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        nix-index-database = {
+            url = "github:nix-community/nix-index-database";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs =
@@ -23,6 +28,7 @@
             nixpkgs,
             home-manager,
             spicetify-nix,
+            nix-index-database,
             ...
         }@inputs:
         {
@@ -35,6 +41,7 @@
                     ./modules/apps/media/spotify.nix
 
                     home-manager.nixosModules.home-manager
+                    nix-index-database.nixosModules.default
                     {
                         home-manager = {
                         useUserPackages = true;
