@@ -30,7 +30,7 @@
                         home-manager.useUserPkgs = true;
 
                         home-manager.users.dusk =
-                            import ./users/dusk/home.nix
+                            import ./users/dusk/home.nix;
                     }
                 ];
             };
