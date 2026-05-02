@@ -9,6 +9,7 @@
         ./_neovim.nix
         ./_keepassxc.nix
         ./_zed.nix
+        ./_spotify.nix
       ];
 
       home.pointerCursor = {

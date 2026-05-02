@@ -14,6 +14,7 @@
         fonts
         termutils
         discord
+        spotify
       ];
 
       boot.kernelPackages = pkgs.linuxPackages_zen;
