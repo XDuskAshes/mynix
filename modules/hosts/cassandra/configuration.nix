@@ -9,6 +9,7 @@
         cassandraHardwareAcceleration
         cassandraBootloader
         kdePlasma
+        hyprland
         greeter
         fonts
         termutils
