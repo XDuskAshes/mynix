@@ -4,8 +4,9 @@
     { pkgs, ... }:
     {
 
-      imports = [
-        self.nixosModules.basewl
+      imports = with self.nixosModules; [
+        basewl
+        waylandwmtools
       ];
 
       services.desktopManager.plasma6 = {

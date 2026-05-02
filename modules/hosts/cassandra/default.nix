@@ -15,10 +15,7 @@
 
         home-manager.users.dusk = {
           imports = with inputs.self.homeModules; [
-            firefox
-            neovim
-            zed
-            keepassxc
+            dusk
           ];
           home.stateVersion = "26.05";
         };
