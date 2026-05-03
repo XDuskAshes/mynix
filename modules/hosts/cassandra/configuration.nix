@@ -24,6 +24,9 @@
         spotify
         minecraft
         steam
+
+        # Groups of apps
+        group-contentcreation
       ];
 
       boot.kernelPackages = pkgs.linuxPackages_zen;
