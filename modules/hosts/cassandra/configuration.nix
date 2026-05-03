@@ -5,16 +5,25 @@
     { pkgs, ... }:
     {
       imports = with self.nixosModules; [
+        # Machine-specific
         cassandraHardware
         cassandraHardwareAcceleration
         cassandraBootloader
+
+        # WM/De
         kdePlasma
         hyprland
         greeter
+
+        # Good to have
         fonts
         termutils
+
+        # Apps
         discord
         spotify
+        minecraft
+        steam
       ];
 
       boot.kernelPackages = pkgs.linuxPackages_zen;
