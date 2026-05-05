@@ -5,7 +5,7 @@
     {
       environment.systemPackages = with pkgs; [
         (discord.override {
-          withVencord = false;
+          withVencord = true; # 05-05-2026: Package is fixed!.
           withOpenASAR = true;
         })
       ];
