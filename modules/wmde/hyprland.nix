@@ -2,7 +2,7 @@
 
 {
   flake.nixosModules.hyprland =
-    { pkgs, ... }:
+    { pkgs, inputs, ... }:
     {
       imports = with self.nixosModules; [
         basewl
