@@ -1,0 +1,23 @@
+name: Mirror from Codeberg
+
+on:
+  schedule:
+    - cron: "30 12 * * MON"
+      timezone: "America/New_York"
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Mirror
+        run: |
+          git clone --mirror https://codeberg.org/XDuskAshes/mynix.git repo.git
+          cd repo.git
+          git push --mirror https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
