@@ -121,6 +121,7 @@
         craftos-pc
         zoxide
         foot
+        libnotify
       ];
 
       programs.gnupg.agent = {
