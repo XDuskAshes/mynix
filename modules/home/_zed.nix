@@ -13,6 +13,7 @@
     ];
     extraPackages = with pkgs; [
       nixd
+      lua-language-server
     ];
     userSettings = {
       disable_ai = true;
@@ -20,6 +21,9 @@
       languages = {
         Nix = {
           language_servers = [ "nixd" ];
+        };
+        Lua = {
+          language_servers = [ "lua-language-server" ];
         };
       };
     };
