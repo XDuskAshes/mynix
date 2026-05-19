@@ -19,6 +19,8 @@
         quickshell
         elephant
         walker
+        hyprshot
+        satty
       ];
     };
 }
