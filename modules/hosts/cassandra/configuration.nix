@@ -11,7 +11,6 @@
         cassandraBootloader
 
         # WM/De
-        kdePlasma
         hyprland
         greeter
 
@@ -122,6 +121,7 @@
         zoxide
         foot
         libnotify
+        mprisence
       ];
 
       programs.gnupg.agent = {
