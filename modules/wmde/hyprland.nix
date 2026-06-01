@@ -17,10 +17,9 @@
       environment.systemPackages = with pkgs; [
         hyprpaper
         quickshell
-        elephant
-        walker
         hyprshot
         satty
+        rofi
       ];
     };
 }
