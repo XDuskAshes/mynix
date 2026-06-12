@@ -5,8 +5,8 @@
     {
       environment.systemPackages = with pkgs; [
         (discord.override {
-          withVencord = true; # 05-05-2026: Package is fixed!
-          withOpenASAR = false; # 05-16-2026: Package is fucked!
+          withVencord = false; # 06-12-2026: Package is fucked!
+          withOpenASAR = true; # 06-12-2026: Package is fixed!
         })
       ];
     };
