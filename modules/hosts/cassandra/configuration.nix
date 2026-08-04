@@ -14,9 +14,8 @@
         hyprland
         greeter
 
-        # Good to have
+        # Looks
         fonts
-        termutils
 
         # Apps
         discord
@@ -26,6 +25,9 @@
 
         # Groups of apps
         group-contentcreation
+
+        # Misc
+        termutils
       ];
 
       boot.kernelPackages = pkgs.linuxPackages_zen;
@@ -98,10 +100,10 @@
         shell = pkgs.fish;
       };
 
-      fileSystems."/mnt/SteamGames" = {
-        device = "/dev/disk/by-label/SteamGames";
+      fileSystems."/home/dusk/Videos" = {
+        device = "/dev/disk/by-label/VideoDrive";
         fsType = "ext4";
-        options = [ "defaults" ];
+        options = [ "nofail" ];
       };
 
       environment.systemPackages = with pkgs; [
@@ -122,8 +124,11 @@
         foot
         libnotify
         mprisence
+        via
       ];
 
+      hardware.keyboard.qmk.enable = true;
+      services.udev.packages = with pkgs; [ via ];
       programs.gnupg.agent = {
         enable = true;
         enableSSHSupport = true;
