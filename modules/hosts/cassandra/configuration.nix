@@ -123,7 +123,6 @@
         zoxide
         foot
         libnotify
-        mprisence
         via
       ];
 
