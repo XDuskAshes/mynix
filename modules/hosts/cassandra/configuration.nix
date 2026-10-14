@@ -28,6 +28,7 @@
 
         # Misc
         termutils
+        revoLang
       ];
 
       boot.kernelPackages = pkgs.linuxPackages_zen;
@@ -114,7 +115,7 @@
         foot
         flatpak
         vlc
-        fastfetch
+        pfetch
         nordzy-cursor-theme
         strawberry
         vscodium
@@ -124,6 +125,12 @@
         foot
         libnotify
         via
+        mprisence
+        obsidian
+        aria2
+
+        kdePackages.dolphin
+        kdePackages.ark
       ];
 
       hardware.keyboard.qmk.enable = true;
