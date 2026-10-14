@@ -6,7 +6,6 @@
     {
       imports = [
         ./_firefox.nix
-        ./_neovim.nix
         ./_keepassxc.nix
         ./_zed.nix
       ];
