@@ -20,6 +20,9 @@
         hyprshot
         satty
         rofi
+        xdg-desktop-portal-hyprland
+        noctalia
+        lua-language-server
       ];
     };
 }

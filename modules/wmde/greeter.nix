@@ -1,16 +1,15 @@
 { ... }:
 {
   flake.nixosModules.greeter =
-    { pkgs, ... }:
+    { pkgs, inputs, ... }:
     {
-      services.greetd = {
+      imports = with inputs; [
+        noctalia-greeter.nixosModules.default
+      ];
+
+      programs.noctalia-greeter = {
         enable = true;
-        settings = {
-          default_session = {
-            command = "${pkgs.tuigreet}/bin/tuigreet --time";
-            user = "greeter";
-          };
-        };
+        greeter-args = "--session Hyprland";
       };
     };
 }
