@@ -8,7 +8,6 @@
           withVencord = true;
           withOpenASAR = false;
         })
-        mprisence
       ];
     };
 }
